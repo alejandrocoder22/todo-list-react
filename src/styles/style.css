@@ -3,10 +3,10 @@ body {
   font-family: 'Courier New', Courier, monospace;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  margin-top: 15rem;
 }
 h1 {
   text-align: center;
@@ -22,10 +22,17 @@ hr {
 li {
   list-style: none;
   padding: 0.25rem;
+  font-weight: bold;
 }
 
 .todo {
   display: flex;
+}
+
+.todo-placeholder {
+  margin: 1rem 0;
+  color: #fff;
+  font-weight: bold;
 }
 .delete-button {
   background: transparent;
@@ -46,4 +53,5 @@ li {
   border-radius: 5px;
   cursor: pointer;
   background: #f7ede2;
+  font-weight: bold;
 }

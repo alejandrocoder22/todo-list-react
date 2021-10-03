@@ -17,17 +17,23 @@ const TodoApp = () => {
       <h1>Todo App</h1>
       <hr />
       <div className='todos-container'>
-        {todos.map(todo => {
-          const { id, desc } = todo
-          return (
-            <Todo
-              key={id}
-              id={id}
-              desc={desc}
-              deleteTodo={() => deleteTodo(id, todos, setTodos)}
-            />
-          )
-        })}
+        {todos.length < 1
+          ? <div className='todo-placeholder'>Do homeworks...</div>
+
+          : todos.map(todo => {
+            const { id, desc } = todo
+            return (
+
+              <Todo
+                key={id}
+                id={id}
+                desc={desc}
+                deleteTodo={() => deleteTodo(id, todos, setTodos)}
+              />
+
+            )
+          })}
+
         <Form
           input={input}
           addTodo={(e) => addTodo(e, input, setTodos, setInput, todos)}
