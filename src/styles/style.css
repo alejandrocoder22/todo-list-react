@@ -1,0 +1,49 @@
+body {
+  background: #f28482;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+h1 {
+  text-align: center;
+  color: #ffff;
+}
+
+hr {
+  display: block;
+  height: 5px;
+  background: #ffff;
+  border: none;
+}
+li {
+  list-style: none;
+  padding: 0.25rem;
+}
+
+.todo {
+  display: flex;
+}
+.delete-button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.todo-input {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+.todo-button {
+  padding: 0.5rem;
+  border: none;
+  margin: 0.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #f7ede2;
+}
