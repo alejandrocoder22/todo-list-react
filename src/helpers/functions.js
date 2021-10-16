@@ -12,18 +12,27 @@ export const deleteTodo = (id, todos, setTodos) => {
 
 export const addTodo = (e, input, setTodos, setInput, todos) => {
   e.preventDefault()
-
+  let newTodo = []
   if (input.trim().length < 1) {
     return null
   }
+  if (todos === null) {
+    newTodo = [
+      {
+        id: new Date(),
+        desc: input,
+        completed: false
+      }]
+  } else {
+    newTodo = [
+      ...todos,
+      {
+        id: new Date(),
+        desc: input,
+        completed: false
+      }]
+  }
 
-  const newTodo = [
-    ...todos,
-    {
-      id: new Date(),
-      desc: input,
-      completed: false
-    }]
   setTodos(newTodo)
   setInput(' ')
   localStorage.setItem('todos', JSON.stringify(newTodo))
