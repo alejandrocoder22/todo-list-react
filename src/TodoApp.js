@@ -17,7 +17,7 @@ const TodoApp = () => {
       <h1>Todo App</h1>
       <hr />
       <div className='todos-container'>
-        {!todos
+        {todos.length < 1
           ? <div className='todo-placeholder'>Do homeworks...</div>
 
           : todos.map(todo => {
